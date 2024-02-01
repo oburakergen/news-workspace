@@ -2,12 +2,18 @@
   "name": "application-name",
   "private": true,
   "scripts": {
+    "dev": "lerna run dev --stream",
     "start": "lerna run dev --stream",
+    "build": "lerna run dev --stream",
     "lint": "lerna run lint --stream",
-    "lint:fix": "lerna run lint:fix --stream"
+    "lint:fix": "lerna run lint:fix --stream",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "lerna": "^8.0.2",
-    "nx": "latest"
-  }
+    "husky": "^9.0.10",
+    "lerna": "^8.0.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

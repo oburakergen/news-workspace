@@ -4,6 +4,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+    compiler: {
+      styledComponents: true
+    },
   images: {
     domains: ["via.placeholder.com"],
   },
