@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+  nestjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nestjs
+    container_name: nestjs
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    depends_on:
+      - mongo
+      - redis
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+  redis:
+    image: redis
+    container_name: redis
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge

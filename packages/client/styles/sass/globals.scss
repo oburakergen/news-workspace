@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "variable";
+
+html,
+body {
+  @apply tw-antialiased tw-leading-normal tw-font-sans tw-bg-gray-100;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+figure,
+div {
+  @apply tw-scroll-smooth tw-m-0 tw-p-0 tw-bg-white tw-border-0 tw-box-border tw-no-underline tw-list-none tw-outline-0 tw-font-sans;
+}
+
+a {
+  @apply tw-no-underline tw-text-black tw-cursor-pointer tw-outline-none tw-transition-all tw-duration-300 tw-ease-in-out;
+  &:hover {
+    @apply tw-no-underline tw-text-black tw-cursor-pointer tw-outline-none tw-transition-all tw-duration-300 tw-ease-in-out;
+  }
+  &:focus {
+    @apply tw-no-underline tw-text-black tw-cursor-pointer tw-outline-none tw-transition-all tw-duration-300 tw-ease-in-out;
+  }
+  &:visited {
+    @apply tw-no-underline tw-text-black tw-cursor-pointer tw-outline-none tw-transition-all tw-duration-300 tw-ease-in-out;
+  }
+}
+
+#__next {
+  @apply tw-relative tw-min-h-screen tw-overflow-x-hidden tw-w-full tw-mx-auto tw-bg-gray-100;
+
+  padding-right: calc($gutter-x * 0.5);
+  padding-left: calc($gutter-x * 0.5);
+
+  @screen xs {
+    max-width: 480px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @screen sm {
+    max-width: 640px;
+    padding-right: calc($gutter-x * 1);
+    padding-left: calc($gutter-x * 1);
+  }
+
+  @screen md {
+    max-width: 768px;
+    padding-right: calc($gutter-x * 1.5);
+    padding-left: calc($gutter-x * 1.5);
+  }
+
+  @screen lg {
+    max-width: 1024px;
+    padding-right: calc($gutter-x * 2);
+    padding-left: calc($gutter-x * 2);
+  }
+
+  @screen xl {
+    max-width: 1280px;
+    padding-right: calc($gutter-x * 2.5);
+    padding-left: calc($gutter-x * 2.5);
+  }
+}
+
+.container {
+
+
+
+}

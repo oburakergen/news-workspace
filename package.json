@@ -1,0 +1,13 @@
+{
+  "name": "application-name",
+  "private": true,
+  "scripts": {
+    "start": "lerna run dev --stream",
+    "lint": "lerna run lint --stream",
+    "lint:fix": "lerna run lint:fix --stream"
+  },
+  "devDependencies": {
+    "lerna": "^8.0.2",
+    "nx": "latest"
+  }
+}
